@@ -1,0 +1,44 @@
+@import 'src/styles/variables'
+
+.proceed-button
+  padding: .55rem 1.3rem .6rem .9rem
+  background: $dark-3
+  border-radius: 5px
+  text-align: left
+  font-family: $font-lato
+  text-transform: uppercase
+  letter-spacing: .06em
+  cursor: pointer
+  transition: opacity .35s
+  animation: proceed-button-enter .6s cubic-bezier(.175, .885, .32, 1.275)
+
+  .label
+    font-size: .55rem
+    font-weight: 500
+    color: transparentize($white, .5)
+    margin-bottom: .1rem
+    transition: opacity .35s
+
+  .title
+    font-size: .8rem
+    font-weight: 900
+    color: $white
+    transition: opacity .35s
+
+
+  &.disabled
+    pointer-events: none
+    opacity: .65
+
+    & > *
+      opacity: .5
+
+
+@keyframes proceed-button-enter
+  from
+    opacity: 0
+    transform: translateY(100%) translateY(1.5rem)
+
+  60%
+    opacity: 0
+    transform: translateY(100%) translateY(1.5rem)
